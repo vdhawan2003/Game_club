@@ -1,0 +1,77 @@
+API Endpoints for members:
+Base URL: http://localhost:8080
+API End Points: /members
+
+POST /members  ->INSERT
+Request Body:
+{
+  "name": "S N Ajay",
+  "ph_no": "9876501234",
+  "balance": 1200.50
+}
+
+Response Body:201
+{
+    "_id": "id0001",
+    "name": "S N Ajay",
+    "ph_no": "9876501234",
+    "balance": 1200.50
+}
+
+
+
+
+
+GET /members ->Get all members
+Response Body:200
+[{
+    "_id": "id0001",
+    "name": "S N Ajay",
+    "ph_no": "9876501234",
+    "balance": 1200.50
+},
+...
+]
+
+GET /members/id0001 
+Response Body:200
+{
+    "_id": "id0001",
+    "name": "S N Ajay",
+    "ph_no": "9876501234",
+    "balance": 1200.50
+}
+
+
+
+DELETE /members/id0001 ->DELETE by id
+Response Body:200
+{
+    "message":"Deleted Successfully"
+}
+
+
+
+
+PUT /members/id0001
+Request Body:
+{
+  "name": "S N Ajay",
+  "ph_no": "9876548764",
+  "balance": 2000.50
+}
+
+Respond Body:200
+{
+  "_id": "id0001",
+  "name": "S N Ajay",
+  "ph_no": "9876548764",
+  "balance": 2000.50
+}
+
+
+
+
+
+
+
