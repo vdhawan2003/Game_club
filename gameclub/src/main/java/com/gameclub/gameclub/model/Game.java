@@ -11,7 +11,7 @@ public class Game{
     private String id;
     private String name;
     private String description;
-    private float price;
+    private Float price;
     public String getId() {
         return id;
     }
