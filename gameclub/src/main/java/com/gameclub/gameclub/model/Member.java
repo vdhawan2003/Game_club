@@ -1,41 +1,41 @@
 package com.gameclub.gameclub.model;
 
-
-import java.util.Objects;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "games")
-public class Game{
+@Document(collection = "members")
+public class Member {
     @Id
     private String id;
     private String name;
-    private String description;
-    private float price;
+    private String phNo;
+    private float balance;
+
     public String getId() {
         return id;
     }
     public void setId(String id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
     }
-    public String getDescription() {
-        return description;
+
+    public String getPhNo() {
+        return phNo;
     }
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    public float getPrice() {
-        return price;
-    }
-    public void setPrice(float price) {
-        this.price = price;
+    public void setPhNo(String phNo) {
+        this.phNo = phNo;
     }
 
-    
+    public float getBalance() {
+        return balance;
+    }
+    public void setBalance(float balance) {
+        this.balance = balance;
+    }
 }
